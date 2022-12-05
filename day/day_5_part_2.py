@@ -40,7 +40,6 @@ def part_2(m):
         from_idx = nums[1]
         to_idx = nums[2]
 
-
         moving = m[from_idx][-quantity:]
         m[to_idx].extend(moving)
         m[from_idx] = m[from_idx][:-quantity]

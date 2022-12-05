@@ -18,7 +18,7 @@ def parse(lines, longest_line, num_of_stacks):
     for v in range(1,num_of_stacks+1):
         m[v] = []
 
-    for i, line in enumerate(reversed(lines)):
+    for line in reversed(lines):
         m = parse_line(line, longest_line, m)
         
     return m
@@ -37,7 +37,6 @@ def part_1(m):
         quantity = nums[0]
         from_idx = nums[1]
         to_idx = nums[2]
-
 
         while quantity > 0:
             m[to_idx].append(m[from_idx].pop())
